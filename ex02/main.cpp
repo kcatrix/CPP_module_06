@@ -1,8 +1,5 @@
 #include "Convert.hpp"
 #include "Base.hpp"
-#include "A.hpp"
-#include "B.hpp"
-#include "C.hpp"
 
 int main(int argc, char **argv)
 {
@@ -13,8 +10,10 @@ int main(int argc, char **argv)
 	a.convert_all();
 	t = a.serialize(a.deserialize(100000000000000000));
 	std::cout << t << std::endl;
-	Base r;
-	r.generate();
-	r.Get_Char();
+	Base u;
+	Base *b;
+	b = u.generate();
+	u.identify(b);
+	u.identify(*b);
 	return 0 ;
 }
